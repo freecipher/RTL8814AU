@@ -50,12 +50,12 @@ mokutil --test-key MOK.der
 ## USB2.0/3.0 mode switch
 Initial it will use USB2.0 mode which will limite 5G 11ac throughput (USB2.0 bandwidth only 480Mbps => throughput around 240Mbps) when modprobe add following options will let it switch to USB3.0 mode at initial driver options 8814au rtw_switch_usb_mode=1
 
-## Run time change usb2.0/3.0 mode
-### usb2.0 => usb3.0
+Run time change usb2.0/3.0 mode
+##### usb2.0 => usb3.0
 ```
 sudo sh -c "echo '1' > /sys/module/8814au/parameters/rtw_switch_usb_mode"
 ```
-### usb3.0 => usb2.0
+##### usb3.0 => usb2.0
 ```
 sudo sh -c "echo '2' > /sys/module/8814au/parameters/rtw_switch_usb_mode"
 ```
